@@ -1,0 +1,53 @@
+Date,Description,Amount,Balance
+1.4.2000,To Sales,6000.0,5.0
+18.4.2000,To Sales By Discount allowed,200.0,8000.0
+30.4.2000,By Cash,4500.0,30.0
+22.5.2000,By Cash,4850.0,12.0
+30.8.1987,Returned inferior goods to Sankar,-800.0,31.0
+1.8.87,Senthil,205.0,5.0
+15.8.87,Rajan,1280.0,23.0
+3.8.87,Natarajan,300.0,7.0
+18.8.87,Murali,1120.0,29.0
+5.4.99,Bought goods for Cash,-6000.0,10.0
+14.4.99,Sold goods to Ganesan on Credit,-9000.0,15.0
+20.4.99,Purchased furniture,-9600.0,21.0
+25.4.99,Paid Mohan,-13600.0,26.0
+27.4.99,Paid Telephone Chages,-300.0,30.0
+1.4.99,To Capital,24000.0,1.0
+10.4.99,To Sales,11200.0,13.0
+23.4.99,To Ganesan,9000.0,20.0
+26.4.99,To Commission,740.0,21.0
+30.4.99,To Bank,3800.0,25.0
+22.1.99,Paid into Bank,-22750.0,25.0
+28.1.99,Paid Cash to Charles less discount,-14200.0,29.0
+7.1.99,By Dravid,150.0,15850.0
+3.1.99,To Sales,33000.0,15.0
+25.1.99,To,200.0,19000.0
+26.1.99,To Bank,17500.0,27.0
+28.1.99,By Charles,100.0,14200.0
+31.1.99,By Salaries,12000.0,31.0
+6.8.99,Payment for Cash purchases,-2000.0,8.0
+9.8.99,Bought goods by Cheque,-3000.0,10.0
+13.8.99,Withdrew from Bank for office use,-4350.0,14.0
+3.8.99,By Rent,5000.0,4.0
+6.8.99,By purchases,2000.0,8.0
+9.8.99,By Purchases,3000.0,13.0
+14.8.99,By Furniture,1260.0,18.0
+31.8.99,By salaries,10000.0,31.0
+7.4.99,Registry,-25.0,10.0
+16.4.99,Auto fare,-20.0,19.0
+20.4.99,Bus fare,-15.0,22.0
+3.4.99,By Stamps,50.0,50.0
+5.4.99,By Taxi fare,100.0,100.0
+7.4.99,By Registry,25.0,25.0
+10.4.99,By Speed post,45.0,45.0
+12.4.99,By Telegram,35.0,35.0
+15.4.99,By Refreshment,55.0,55.0
+16.4.99,By Auto fare,20.0,20.0
+19.4.99,By Typing paper,60.0,60.0
+20.4.99,By Bus fare,15.0,15.0
+22.4.99,By Trunk calls,43.0,43.0
+25.4.99,By office,18.0,18.0
+30.4.99,By courier,17.0,17.0
+1.3.99,3 June,4.0,1000.0
+15.3.99,2 May,18.0,1150.0
