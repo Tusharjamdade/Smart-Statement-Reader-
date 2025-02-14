@@ -153,7 +153,7 @@ export default function Signup() {
               <Input
                 id="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder="example@example.com"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -182,17 +182,17 @@ export default function Signup() {
               />
             </div>
             <Button type="submit" className="w-full" onClick={onClickHandler}>
-              Signup
+              Sign Up
             </Button>
-            <Button variant="outline" className="w-full">
+            {/* <Button variant="outline" className="w-full">
               Signup with Google
-            </Button>
+            </Button> */}
           </div>
 
           <div className="mt-4 text-center text-sm">
             Already have an account?{" "}
-            <Link href="/login" className="underline">
-              Login
+            <Link href={"/signin"} className="underline">
+              Signin
             </Link>
           </div>
         </div>

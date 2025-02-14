@@ -1,0 +1,8 @@
+Course,Unit,Topic,Hours,Assignment_Number,Assignment_Description
+CD22231: MACHINE LEARNING,Unit I: Introduction to Machine Learning,Introduction to Machine Learning,6,1,Data manipulation in R/Python (reading, shape, missing values, data types, zeros, indexing, sorting, attribute description, unique value counting, data type conversion)
+CD22231: MACHINE LEARNING,Unit II: Pre-processing and Extracting meaning from Data,Data Preprocessing,6,2,Summary statistics, histogram visualization, data cleaning, integration, transformation, and classification model building.
+CD22231: MACHINE LEARNING,Unit II: Pre-processing and Extracting meaning from Data,Data Preprocessing,6,3,Data visualization using scatter, bar, box, pie, and line charts.
+CD22231: MACHINE LEARNING,Unit IV: Supervised Models– I,Customer Response Prediction,6,4,Predicting customer response to a special offer using ML algorithms and evaluating using confusion matrix (accuracy, precision, recall, F1-score).
+CD22231: MACHINE LEARNING,Unit VI: Unsupervised Models,Customer Segmentation,6,5,Customer segmentation using clustering algorithms (at least two) based on spending score. Includes data preprocessing, train-test split, algorithm application, model evaluation, and cross-validation.
+CD22231: MACHINE LEARNING,Unit IV: Supervised Models– I,Temperature Prediction,6,6,Temperature prediction using linear regression, assessing performance with MSE, MAE, and R-squared, and visualizing the model.
+CD22231: MACHINE LEARNING,Unit V: Supervised Models - II,Student Admissions Prediction,6,7,Predicting student admissions using a decision tree classifier. Includes data preprocessing (label encoding, data transformation), train-test split, algorithm application, and model evaluation.

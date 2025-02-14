@@ -23,57 +23,55 @@ import {
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ModeToggle } from './ModeToggle'
-import { useRouter } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { signOut, useSession } from 'next-auth/react'
 
 const Navbar = () => {
-  const router =useRouter()
+    const { data: session, status } = useSession();
+  
+    const router = useRouter();
+
+    const handleLogout = async () => {
+      await signOut(); // Prevents NextAuth from handling redirection
+      router.push("/"); // Manually redirect after signout
+    };
+  // const router =useRouter()
   return (
     <div className='sticky top-0 z-50'>
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <Link
-            href="/jobs"
+            href="/app"
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
           >
              <div className="flex items-center gap-2">
-          {/* <div className="bg-primary rounded-full w-10 h-10 flex items-center justify-center"> */}
-            {/* <div className="text-primary-foreground font-bold text-2xl">AI</div> */}
-          {/* </div> */}
           <span className="text-2xl font-medium text-foreground">LedgerAI</span>
         </div>
           </Link>
-          {/* <Link
-            href="#"
+          {status == "authenticated" && (
+            <>
+          
+          <Link
+            href="/app"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
-            
-            TaskBidder
-          </Link> */}
+            Home
+          </Link>
           <Link
-            href="/jobs"
+            href="/preview"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
-            Jobs
+            Preview
           </Link>
           <Link
-            href="/postjob"
+            href="/chart"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
-            Post
+            Chart
           </Link>
-          <Link
-            href="/faq"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            FAQ
-          </Link>
-          <Link
-            href="/settings"
-            className="text-foreground transition-colors hover:text-foreground"
-          >
-            Settings
-          </Link>
+          </>
+          )}
         </nav>
         <Sheet>
           <SheetTrigger asChild>
@@ -89,39 +87,41 @@ const Navbar = () => {
           <SheetContent side="left">
             <nav className="grid gap-6 text-lg font-medium">
               <Link
-                href="#"
+                href="/app"
                 className="flex items-center gap-2 text-lg font-semibold"
               >
-                <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
+                {/* <Package2 className="h-6 w-6" /> */}
+                <span className="sr-only">LedgerAI</span>
               </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Dashboard
-              </Link>
-              <Link
-                href="/posts"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Posts
-              </Link>
-              <Link
-                href="/post"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Post
-              </Link>
-              <Link
-                href="/settings"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Settings
-              </Link>
-              <Link href="#" className="hover:text-foreground">
-                FAQ
-              </Link>
+              {status == "authenticated" && (
+            <>
+          
+          <Link
+            href="/app"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Home
+          </Link>
+          <Link
+            href="/preview"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Preview
+          </Link>
+          <Link
+            href="/chart"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Chart
+          </Link>
+          <Link
+            href="/chart"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            FAQ
+          </Link>
+          </>
+          )}
             </nav>
           </SheetContent>
         </Sheet>
@@ -147,10 +147,10 @@ const Navbar = () => {
             <DropdownMenuContent align="end">
               <DropdownMenuLabel ><Link href={"/profile"}>My Account</Link></DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem><Link href={"/settings"}>Settings</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href={"/support"}>Support</Link></DropdownMenuItem>
+              {/* <DropdownMenuItem><Link href={"/settings"}>Settings</Link></DropdownMenuItem> */}
+              {/* <DropdownMenuItem><Link href={"/support"}>Support</Link></DropdownMenuItem> */}
               <DropdownMenuSeparator />
-              <DropdownMenuItem><Link href={"/"}>Logout</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -160,3 +160,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

@@ -146,7 +146,7 @@ export const NEXT_AUTH_HANDLER: NextAuthOptions = {
     async redirect({ url, baseUrl }) {
       // Redirect users based on role
       if (url.includes("/admin")) return `${baseUrl}/`;
-      return `${baseUrl}/`;
+      return `${baseUrl}/app`;
     },
   },
 };
