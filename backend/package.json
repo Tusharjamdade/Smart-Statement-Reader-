@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "jupyter": "^0.0.0",
-    "notebook": "^1.0.1"
-  }
-}
